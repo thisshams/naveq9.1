@@ -1,8 +1,8 @@
 from flask import Flask , render_template , request,url_for
 from response import get_response
-
+from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
-
+run_with_ngrok(app)
 @app.route('/' )
 @app.route('/index')
 def index():
